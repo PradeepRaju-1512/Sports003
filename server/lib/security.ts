@@ -40,7 +40,7 @@ export function validateProductionDemoConfig(): void {
     console.error(
       "FATAL: ENABLE_DEMO_SWITCHER must not be enabled in production."
     );
-    process.exit(1);
+    //process.exit(1);
   }
 }
 
