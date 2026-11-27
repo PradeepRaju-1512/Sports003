@@ -1,0 +1,23 @@
+{
+  "name": "IIITT Sports & Prothymos",
+  "short_name": "IIITT Sports",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08080A",
+  "theme_color": "#B91C1C",
+  "description": "Official IIIT Tiruchirappalli Sports & Prothymos Management Platform",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

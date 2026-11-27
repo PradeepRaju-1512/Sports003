@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Oswald", "Impact", "Arial Narrow", sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  html,
+  body {
+    background-color: #111113;
+    color: #f5f2eb;
+    font-family: var(--font-body);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: 0.025em;
+    line-height: 1.08;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0d0d0f;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2c2b2e;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b91c1c;
+  }
+}
+
+.hero-title,
+.section-heading,
+.page-title,
+.card-title,
+.banner-title,
+.font-editorial {
+  font-family: var(--font-display);
+  letter-spacing: 0.025em;
+  line-height: 1.08;
+  text-transform: uppercase;
+}
+
+.font-mono,
+.tabular-score {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.rdr-panel {
+  background: #161618;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rdr-border-crimson {
+  border: 1px solid rgba(185, 28, 28, 0.45);
+}
+
+.rdr-section-title {
+  font-family: var(--font-display);
+  border-left: 2px solid #dc2626;
+  padding-left: 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.08;
+  text-transform: uppercase;
+  color: #f5f2eb;
+}
+
+@keyframes auctionSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes bidPop {
+  0% {
+    transform: scale(0.94);
+    text-shadow: 0 0 0 rgba(217, 119, 6, 0);
+  }
+  50% {
+    transform: scale(1.06);
+    text-shadow: 0 0 24px rgba(245, 158, 11, 0.55);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 0 rgba(217, 119, 6, 0);
+  }
+}
+
+@keyframes gavelStamp {
+  0% {
+    opacity: 0;
+    transform: scale(1.6) rotate(-10deg);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(0.94) rotate(-3deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-3deg);
+  }
+}
+
+.animate-auction-slide {
+  animation: auctionSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-bid-pop {
+  animation: bidPop 0.3s ease-out;
+}
+
+.animate-gavel-stamp {
+  animation: gavelStamp 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.leading-gold-glow {
+  box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.75), 0 0 24px rgba(217, 119, 6, 0.25);
+}
